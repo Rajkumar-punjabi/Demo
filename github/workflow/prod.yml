@@ -1,0 +1,16 @@
+# prod-pipeline.yml
+# This YAML defines the pipeline for the production environment
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps:
+    - script: echo "Building the production application"
+      displayName: 'Build Application for Prod'
+
+- stage: Deploy
+  jobs:
+  - job: Deploy
+    steps:
+    - script: echo "Deploying to production"
+      displayName: 'Deploy to Prod'

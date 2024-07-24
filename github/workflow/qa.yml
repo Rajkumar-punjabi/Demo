@@ -1,0 +1,16 @@
+# qa-pipeline.yml
+# This YAML defines the pipeline for the QA environment
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps:
+    - script: echo "Building the application for QA"
+      displayName: 'Build Application for QA'
+
+- stage: Test
+  jobs:
+  - job: Test
+    steps:
+    - script: echo "Running QA tests"
+      displayName: 'Run QA Tests'

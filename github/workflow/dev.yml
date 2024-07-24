@@ -1,0 +1,16 @@
+# dev-pipeline.yml
+# This YAML defines the pipeline for the development environment
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps:
+    - script: echo "Building the application"
+      displayName: 'Build Application'
+
+- stage: Test
+  jobs:
+  - job: Test
+    steps:
+    - script: echo "Running tests"
+      displayName: 'Run Tests'
